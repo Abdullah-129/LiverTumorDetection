@@ -15,17 +15,3 @@
     <ul>
         <li><code>/detect-tumor</code>: Use this endpoint to send a CT scan image and receive a prediction for the presence of a liver tumor.</li>
     </ul>
-
-    <h2>Example Usage</h2>
-    <pre><code>import requests
-
-url = 'http://localhost:5000/detect-tumor'
-files = {'file': open('path/to/your/ct_scan_image.jpg', 'rb')}
-response = requests.post(url, files=files)
-
-if response.status_code == 200:
-    prediction = response.json()
-    print(f'Tumor detected: {prediction["tumor_detected"]}')
-else:
-    print('Error occurred:', response.text)
-</code></pre>
